@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Listeners_sudo">
+	<listeners>
+		<listener class-name="Listener_pr.listener"/>
+	</listeners>
+	<test name="LoginTest">
+		<classes>
+			<class name="Listener_pr.LoginTest">
+				<methods>
+					<include name="LoginByEmail"/>
+					<exclude name="LoginByFacebook"/> <!-- We can control on individual test case to not run by putting exclude -->
+					<include name="LogeedIn"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
